@@ -16,4 +16,4 @@ class Settings(BaseSettings):
         env_file_encoding='utf-8'
     )
 
-    bank_http_client: HTTPClientConfig
+    fake_bank_http_client: HTTPClientConfig
