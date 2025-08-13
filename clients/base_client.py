@@ -5,6 +5,7 @@ from httpx import AsyncClient, URL, Response, QueryParams
 from httpx._types import RequestData, RequestFiles
 
 from config import HTTPClientConfig
+from clients.event_hooks import *
 
 class AsyncBaseClient:
 
@@ -49,5 +50,9 @@ class AsyncBaseClient:
     
 def get_async_http_client(config: HTTPClientConfig) -> AsyncClient:
     return AsyncClient(
-        base_url=config.client_url
+        base_url=config.client_url,
+        event_hooks={
+            'request': [log_request_event_hook],
+            'response': [log_respose_event_hook]
+        }
     )

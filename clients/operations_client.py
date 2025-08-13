@@ -2,7 +2,7 @@ import allure
 from httpx import Response
 
 from clients.base_client import AsyncBaseClient, get_async_http_client
-from schema.operations import CreateTransactionSchema, UpdateTransactionSchema
+from schema.operations import CreateTransactionSchema, UpdateTransactionSchema, OperationSchema
 from config import Settings
 from tools.routes import ApiRoutes
 
@@ -39,6 +39,15 @@ class OperationsAsyncClient(AsyncBaseClient):
         return await self.delete(
             f'{ApiRoutes.OPERATIONS}/{operation_id}',
         )
+    
+    async def create_operation(self) -> OperationSchema:
+
+        request = CreateTransactionSchema()
+
+        response = await self.create_operation_api(request)
+
+        return OperationSchema.model_validate_json(response.text)
+
 
 def get_assync_operation_client(settings: Settings) -> OperationsAsyncClient:
     return OperationsAsyncClient(
