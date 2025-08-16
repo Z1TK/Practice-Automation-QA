@@ -1,0 +1,4 @@
+INFO     HTTP_CLIENT:event_hooks.py:7 Mke GET request to https://api.sampleapis.com/fakebank/accounts
+INFO     HTTP_CLIENT:event_hooks.py:10 Got response 200 OK from https://api.sampleapis.com/fakebank/accounts
+INFO     BASE_ASSERTIONS:base.py:12 Check that response status code equals to 200
+INFO     SCHEMA_ASSERTION:schema.py:14 Validating JSON schema

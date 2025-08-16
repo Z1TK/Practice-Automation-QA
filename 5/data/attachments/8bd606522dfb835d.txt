@@ -1,0 +1,14 @@
+INFO     HTTP_CLIENT:event_hooks.py:7 Mke POST request to https://api.sampleapis.com/fakebank/accounts
+INFO     HTTP_CLIENT:event_hooks.py:10 Got response 201 Created from https://api.sampleapis.com/fakebank/accounts
+INFO     HTTP_CLIENT:event_hooks.py:7 Mke PATCH request to https://api.sampleapis.com/fakebank/accounts/2665
+INFO     HTTP_CLIENT:event_hooks.py:10 Got response 200 OK from https://api.sampleapis.com/fakebank/accounts/2665
+INFO     BASE_ASSERTIONS:base.py:12 Check that response status code equals to 200
+INFO     OPERATIONS_ASSERTIONS:operations.py:14 Check create operation
+INFO     BASE_ASSERTIONS:base.py:23 Check that "debit" equals to 30.2126390956
+INFO     BASE_ASSERTIONS:base.py:23 Check that "credit" equals to -9.36243642557
+INFO     BASE_ASSERTIONS:base.py:23 Check that "category" equals to fuel
+INFO     BASE_ASSERTIONS:base.py:23 Check that "description" equals to Fill mean seem a.
+INFO     BASE_ASSERTIONS:base.py:23 Check that "transaction_date" equals to 2025-08-06
+INFO     SCHEMA_ASSERTION:schema.py:14 Validating JSON schema
+INFO     HTTP_CLIENT:event_hooks.py:7 Mke DELETE request to https://api.sampleapis.com/fakebank/accounts/2665
+INFO     HTTP_CLIENT:event_hooks.py:10 Got response 200 OK from https://api.sampleapis.com/fakebank/accounts/2665
