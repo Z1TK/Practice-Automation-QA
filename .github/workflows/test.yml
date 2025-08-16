@@ -12,7 +12,7 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     env: 
-      FAKE_BANK_HTTP_CLIENT_URL: ${{ secrets.FAKE_BANK_HTTP_CLIENT_URL }}
+      FAKE_BANK_HTTP_CLIENT_URL: ${{ secrets.FAKE_BANK_HTTP_CLIENT_URL}}
 
     steps:
       - name: Check out repository
